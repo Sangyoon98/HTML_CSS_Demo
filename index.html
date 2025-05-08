@@ -103,7 +103,7 @@
       }
 
       .banner {
-        height: 996px;
+        height: 642px;
         width: 100vw;
         display: flex;
         flex-direction: column;
@@ -199,7 +199,7 @@
       .banner_content_container {
         width: 100%;
         max-width: 1280px;
-        padding: 40px;
+        padding: 0 40px 50px 40px;
         margin: 0 auto;
         display: flex;
         flex-grow: 1;
@@ -251,12 +251,6 @@
         border: 2px solid white;
       }
 
-      @media only screen and (max-width: 720px) {
-        .banner {
-          background-image: url(./logi/mx-brio-hpb-mobile.webp);
-        }
-      }
-
       @media only screen and (max-width: 1024px) {
         .hamburger {
           display: flex;
@@ -303,6 +297,17 @@
 
         .banner_content h2 {
           text-align: center;
+          font-size: 48px;
+        }
+      }
+
+      @media only screen and (max-width: 720px) {
+        .banner {
+          background-image: url(./logi/mx-brio-hpb-mobile.webp);
+        }
+
+        .banner_content h2 {
+          font-size: 28px;
         }
       }
 
