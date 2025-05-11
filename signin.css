@@ -27,6 +27,13 @@ body {
   max-width: 400px;
 }
 
+.description_title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .description {
   font-size: 14px;
   color: #666;
@@ -41,6 +48,9 @@ body {
   padding: 5px;
 }
 
+.last_name_field,
+.birth_field,
+.email_field,
 .password_field {
   margin-top: 16px;
 }
@@ -54,22 +64,24 @@ input {
   padding: 12px;
 }
 
-.forgot_link_container {
+.checkbox_container {
   display: flex;
-  justify-self: right;
+  justify-self: center;
 }
 
-.forgot_link {
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
+.checkbox {
+  width: 25px;
+  height: 25px;
+  margin: 0 15px;
 }
 
+.checkbox_container,
 .link_text {
   margin: 40px 0;
   font-weight: lighter;
 }
 
+.checkbox_container a,
 .link_text a {
   color: black;
   font-weight: normal;
