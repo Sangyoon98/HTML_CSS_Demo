@@ -57,6 +57,7 @@ input {
 .forgot_link_container {
   display: flex;
   justify-self: right;
+  padding-top: 20px;
 }
 
 .forgot_link {

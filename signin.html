@@ -28,7 +28,9 @@
             />
           </div>
         </div>
-        <div class="field_error">이름을 입력하십시오.</div>
+        <div id="first_name_error" class="field_error">
+          이름을 입력하십시오.
+        </div>
 
         <div>
           <div class="last_name_field">
@@ -41,7 +43,7 @@
             />
           </div>
         </div>
-        <div class="field_error">성을 입력하십시오.</div>
+        <div id="last_name_error" class="field_error">성을 입력하십시오.</div>
 
         <div>
           <div class="birth_field">
@@ -54,7 +56,9 @@
             />
           </div>
         </div>
-        <div class="field_error">생년월일을 입력하십시오.</div>
+        <div id="birth_field_error" class="field_error">
+          생년월일을 입력하십시오.
+        </div>
 
         <div>
           <div class="email_field">
@@ -67,7 +71,9 @@
             />
           </div>
         </div>
-        <div class="field_error">올바른 이메일 주소를 입력하십시오.</div>
+        <div id="email_field_error" class="field_error">
+          올바른 이메일 주소를 입력하십시오.
+        </div>
 
         <div class="password_container">
           <div class="password_field">
@@ -75,16 +81,37 @@
               id="암호"
               class="styled_input"
               type="password"
-              placeholder="암호"
+              placeholder="암호 (8-20자, 영문, 숫자, 특수문자 포함)"
             />
           </div>
-          <!-- <div class="show_hide_container">
+          <!-- <div class="show_hide_containe">
             <div class="show_hide">
               <img src="" alt="" />
             </div>
           </div> -->
         </div>
-        <div class="field_error">암호를 입력하십시오</div>
+        <div id="password_field_error" class="field_error">
+          암호를 입력하십시오
+        </div>
+
+        <div class="password_check_container">
+          <div class="password_check_field">
+            <input
+              id="암호 확인"
+              class="styled_input"
+              type="password"
+              placeholder="암호 확인"
+            />
+          </div>
+          <!-- <div class="show_hide_containe">
+            <div class="show_hide">
+              <img src="" alt="" />
+            </div>
+          </div> -->
+        </div>
+        <div id="password_check_field_error" class="field_error">
+          암호를 입력하십시오
+        </div>
 
         <div class="checkbox_container">
           <input class="checkbox" type="checkbox" />
@@ -151,5 +178,7 @@
         </div>
       </div>
     </div>
+
+    <script src="./signin.js"></script>
   </body>
 </html>
