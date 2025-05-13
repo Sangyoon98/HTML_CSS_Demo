@@ -26,6 +26,7 @@ body {
 .form_container {
   margin-top: 20px;
   max-width: 400px;
+  transition: all 0.3s ease;
 }
 
 .description_title {
@@ -48,6 +49,7 @@ body {
   font-size: 14px;
   padding: 5px;
   display: none;
+  transition: all 0.3s ease;
 }
 
 .last_name_field,

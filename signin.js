@@ -121,20 +121,46 @@ const checkboxField = document.querySelector(".checkbox");
 const summit = document.querySelector(".summit");
 
 summit.addEventListener("click", () => {
-  // LocalStorage 저장
+  const firstName = firstNameField.value.trim();
+  const lastName = lastNameField.value.trim();
+  const birth = birthField.value.trim();
+  const email = emailField.value.trim();
+  const password = passwordField.value.trim();
+  const isMarketing = checkboxField.checked;
+
+  if (
+    firstName === "" ||
+    lastName === "" ||
+    birth === "" ||
+    email === "" ||
+    password === ""
+  ) {
+    alert("Logi ID를 생성하려면 모든 필드를 작성하십시오.");
+    return;
+  }
+
+  // 기존 회원 목록 불러오기
+  const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+  // 새로운 회원 정보 생성
+  const newUser = {
+    firstName: firstName,
+    lastName: lastName,
+    birth: birth,
+    email: email,
+    password: password,
+    isMarketing: isMarketing,
+  };
+
+  // 새로운 회원 추가
+  existingUsers.push(newUser);
+
+  // 배열로 저장
+  localStorage.setItem("users", JSON.stringify(existingUsers));
+
+  // 알림
+  alert("회원가입을 완료하였습니다.");
+
   // 로그인 페이지 이동
-
-  localStorage.setItem(
-    "json",
-    JSON.stringify({
-      firstName: firstNameField.value.trim(),
-      lastName: lastNameField.value.trim(),
-      birth: birthField.value.trim(),
-      email: emailField.value.trim(),
-      password: passwordField.value.trim(),
-      isMarketing: checkboxField.checked,
-    })
-  );
-
-  console.log(JSON.parse(localStorage.getItem("json")));
+  window.location.href = "./index.html";
 });

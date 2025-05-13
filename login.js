@@ -33,6 +33,31 @@ passwordField.addEventListener("input", () => {
 // 로그인
 const login = document.querySelector(".summit");
 login.addEventListener("click", () => {
-  // LocalStorage 비교 후 로그인 후 메인 페이지 이동
-  // 실패 시 alert or 회원가입
+  const email = emailField.value.trim();
+  const password = passwordField.value.trim();
+
+  if (email === "" || password === "") {
+    alert("이메일과 암호를 모두 입력하십시오.");
+    return;
+  }
+
+  // 로컬스토리지에서 사용자 데이터 가져오기
+  const userData = localStorage.getItem("users");
+  if (userData) {
+    const users = JSON.parse(userData) || [];
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (user) {
+      // 로그인 성공
+      window.location.href = "./main.html";
+    } else {
+      // 로그인 실패
+      alert("이메일 또는 암호가 올바르지 않습니다");
+    }
+  } else {
+    alert("이메일 또는 암호가 올바르지 않습니다");
+    // alert("등록된 계정이 없습니다. 먼저 회원가입을 해주세요.");
+  }
 });
