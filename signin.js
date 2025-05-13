@@ -1,3 +1,29 @@
+// 암호 보여주기
+const showHide = document.querySelector(".show_hide");
+const showHideCheck = document.querySelector(".show_hide_check");
+const eyeIcon = showHide.querySelector("i");
+const eyeIconCheck = showHideCheck.querySelector("i");
+const passwordType = document.querySelector(".password_field input");
+const passwordCheckType = document.querySelector(".password_check_field input");
+
+showHide.addEventListener("click", () => {
+  const isPasswordHidden = passwordType.type === "password";
+  // 비밀번호 필드 타입 변경
+  passwordType.type = isPasswordHidden ? "text" : "password";
+  // 아이콘 변경
+  eyeIcon.classList.toggle("fa-eye-slash");
+  eyeIcon.classList.toggle("fa-eye");
+});
+
+showHideCheck.addEventListener("click", () => {
+  const isPasswordCheckHidden = passwordCheckType.type === "password";
+  // 비밀번호 필드 타입 변경
+  passwordCheckType.type = isPasswordCheckHidden ? "text" : "password";
+  // 아이콘 변경
+  eyeIconCheck.classList.toggle("fa-eye-slash");
+  eyeIconCheck.classList.toggle("fa-eye");
+});
+
 // 이름 정규표현식
 const firstNameField = document.querySelector(".first_name_field input");
 const firstNameError = document.querySelector("#first_name_error");

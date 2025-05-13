@@ -1,3 +1,17 @@
+// 암호 보여주기
+const showHide = document.querySelector(".show_hide");
+const eyeIcon = showHide.querySelector("i");
+const passwordType = document.querySelector(".password_field input");
+
+showHide.addEventListener("click", () => {
+  const isPasswordHidden = passwordType.type === "password";
+  // 비밀번호 필드 타입 변경
+  passwordType.type = isPasswordHidden ? "text" : "password";
+  // 아이콘 변경
+  eyeIcon.classList.toggle("fa-eye-slash");
+  eyeIcon.classList.toggle("fa-eye");
+});
+
 // 이메일 필드 검증
 const emailField = document.querySelector(".email_field input");
 const emailError = document.querySelector("#email_field_error");

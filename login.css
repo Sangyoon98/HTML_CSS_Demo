@@ -44,11 +44,21 @@ body {
 
 .password_field {
   margin-top: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show_hide {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
 }
 
 input {
   width: 100%;
-  background-color: #f0f0f0;
+  background-color: rgba(255, 255, 255, 0);
   border: none;
   border-bottom: 1px solid #ccc;
   border-radius: 4px;
